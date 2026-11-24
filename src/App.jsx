@@ -1,9 +1,16 @@
-import React from 'react'
 
-const App = () => {
+import { Routes, Route } from "react-router-dom";
+
+import Blog from "./pages/Blog";
+import Press from "./pages/Press";
+
+function App() {
   return (
-    <div>App</div>
-  )
+    <Routes>
+      <Route path="/" element={<Blog />} />
+      <Route path="/press" element={<Press />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
